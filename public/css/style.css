@@ -1,0 +1,534 @@
+/**
+Fonts
+ */
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/**
+Global styling
+ */
+.fullwidth {
+    width : 100%;
+}
+
+.fullbrowserhight {
+    height : 100vh;
+}
+
+.black {
+    background-color : #000000;
+}
+
+.white {
+    background-color : #FFFFFF;
+}
+
+html {
+    overflow-x : hidden;
+}
+
+/**
+Heading animation
+*/
+
+/*#region svg main */
+svg.main {
+    font-family : -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    display     : block;
+    font-size   : 13vw;;
+    width       : 100%;
+    height      : 100%;
+    margin      : 0 auto;
+}
+
+svg.main > g > .text-copy {
+    fill              : none;
+    stroke            : white;
+    stroke-dasharray  : 6% 29%;
+    stroke-width      : 5px;
+    stroke-dashoffset : 0%;
+    animation         : stroke-offset 5.5s infinite linear;
+}
+
+svg.main > g > .text-copy:nth-child(1) {
+    stroke          : #FFFFFF;
+    animation-delay : -1;
+}
+
+svg.main > g > .text-copy:nth-child(2) {
+    stroke          : #FFFFFF;
+    animation-delay : -2s;
+}
+
+svg.main > g > .text-copy:nth-child(3) {
+    stroke          : #FFFFFF;
+    animation-delay : -3s;
+}
+
+svg.main > g > .text-copy:nth-child(4) {
+    stroke          : #FFFFFF;
+    animation-delay : -4s;
+}
+
+svg.main > g > .text-copy:nth-child(5) {
+    stroke          : #FFFFFF;
+    animation-delay : -5s;
+}
+
+/*#endregion*/
+
+@keyframes stroke-offset {
+    100% {
+        stroke-dashoffset : -35%;
+    }
+}
+
+/**
+CSS Shapes
+ */
+.diamond, .dia {
+    margin           : 0 auto;
+    transform-origin : 50% 50%;
+    overflow         : hidden;
+    width            : 300px;
+    height           : 300px;
+}
+
+.diamond {
+    position    : absolute;
+    left        : 50%;
+    margin-left : -150px;
+    transform   : rotate(45deg) translateY(-25px) translateX(-25px);
+    z-index     : 99;
+    top         : 10%;
+}
+
+.diamond .dia {
+    width     : 380px;
+    height    : 380px;
+    transform : rotate(-45deg);
+}
+
+.diamond img {
+    width  : 100%;
+    height : auto;
+}
+
+/**
+Homepage styling
+ */
+
+#homepage-banner {
+    width    : 100%;
+    position : fixed;
+    top      : 0;
+    z-index  : -1;
+    padding  : 0;
+}
+
+#homepage-banner > div {
+    height : 90vh;
+}
+
+.display-table {
+    height  : 100%;
+    display : table;
+    width   : 100%;
+}
+
+.navigation {
+    margin-top       : 90vh;
+    position         : relative;
+    z-index          : 1;
+    box-shadow       : 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    background-color : #FFFFFF;
+    color            : #000000;
+}
+
+.main-nav-scrolled {
+    margin-top : 0;
+    position   : fixed;
+    top        : 0;
+    width      : 100%;
+    z-index    : 9999;
+}
+
+.about-text {
+    color          : #FFFFFF;
+    font-family    : "lato Light";
+    text-align     : center;
+    vertical-align : middle;
+    display        : table-cell;
+}
+
+.block1 {
+    height              : 200vh;
+    width               : 31%;
+    background-color    : black;
+    position            : absolute;
+    left                : -14%;
+    top                 : -70%;
+    transform           : rotate(20deg);
+
+    z-index             : -1;
+    animation           : block1_animation 2s ease-in-out;
+    animation-fill-mode : forwards;
+}
+
+.block2 {
+    height              : 200vh;
+    width               : 31%;
+    background-color    : black;
+    position            : absolute;
+    right               : -14%;
+    bottom              : -70%;
+    transform           : rotate(20deg);
+
+    z-index             : -1;
+    animation           : block2_animation 2s ease-in-out;
+    animation-fill-mode : forwards;
+
+}
+
+@keyframes block1_animation {
+    0%, 10% {
+        left : -14%;
+    }
+    40% {
+        left : 82%;
+    }
+    80% {
+        left      : -14%;
+        width     : 31%;
+        transform : rotate(20deg);
+    }
+    100% {
+        left      : 0;
+        width     : 50%;
+        transform : rotate(0deg);
+    }
+}
+
+@keyframes block2_animation {
+    0%, 10% {
+        right : -14%;
+    }
+    40% {
+        right : 82%;
+    }
+    80% {
+        right     : -14%;
+        width     : 31%;
+        transform : rotate(20deg);
+    }
+    100% {
+        right     : 0%;
+        width     : 50%;
+        transform : rotate(0deg);
+    }
+}
+
+/**
+Projects
+*/
+
+#projects {
+    background-color : #FFFFFF;
+}
+
+#projects > .filter {
+    height           : 50px;
+    background-color : #000000;
+    color            : #FFFFFF;
+    text-align       : center;
+    line-height      : 50px;
+    margin-bottom    : 50px;
+}
+
+#projects > .filter > div > a > div:hover {
+    position : relative;
+    top      : 50px;
+}
+
+#projects > .filter > div > a {
+    text-decoration : none;
+}
+
+.project_item {
+    background-color : #FFFFFF;
+    margin           : 3%;
+    border           : 1px solid #CCCCCC;
+    padding-bottom   : 2%;
+}
+
+.project_item a {
+    text-decoration : none !important;
+    color           : #000000 !important;
+}
+
+.filter > div > div > a {
+    color           : #FFFFFF;
+    text-decoration : none;
+}
+
+.active_filter > a > div {
+    position            : relative;
+
+    animation           : active_filter 1s ease;
+    animation-fill-mode : forwards;
+}
+
+.filter > div > div > a > div::before {
+    color   : #000000;
+    content : "❱";
+}
+
+.filter > div > div > a > div::after {
+    color   : #000000;
+    content : "❰";
+}
+
+@keyframes active_filter {
+    0% {
+        color : #FFFFFF;
+        top   : 0;
+    }
+    100% {
+        color : #000000;
+        top   : 50px;
+    }
+}
+
+.disabling_filter > a > div {
+    position            : relative;
+
+    animation           : disabled_filter 1s ease;
+    animation-fill-mode : forwards;
+}
+
+@keyframes disabled_filter {
+    0% {
+        color : #000000;
+        top   : 50px;
+    }
+    100% {
+        color : #FFFFFF;
+        top   : 0;
+    }
+}
+
+.project_item:hover {
+    animation           : project 0.5s ease;
+    animation-fill-mode : forwards;
+
+    position            : relative;
+    transition          : all 0.5s ease;
+
+    -webkit-box-shadow  : -10px 10px 0px 0px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow     : -10px 10px 0px 0px rgba(0, 0, 0, 0.8);
+    box-shadow          : -10px 10px 0px 0px rgba(0, 0, 0, 0.8);
+
+}
+
+@keyframes project {
+    0% {
+        bottom : 0;
+        left   : 0;
+    }
+    100% {
+        bottom : 10px;
+        left   : 10px;
+    }
+}
+
+.project_img {
+    height   : 300px;
+    position : relative;
+}
+
+.project_img:hover .project_description {
+    opacity   : 1;
+    animation : fadein 1s;
+}
+
+.project_description {
+    padding          : 2%;
+    position         : absolute;
+    bottom           : 0;
+    background-color : rgba(198, 200, 202, 0.50);
+    opacity          : 0;
+}
+
+.project_title {
+    padding : 2%;
+}
+
+.project_tags {
+    padding : 2%;
+}
+
+.project_tags > span {
+    padding          : 1%;
+    background-color : #000000;
+    color            : #FFFFFF;
+    border           : 6px double #FFFFFF;
+}
+
+/* Skills Progess Bar */
+
+section#skills-pgr > h2 {
+    color      : #FFFFFF;
+    text-align : center;
+}
+
+section#skills-pgr > hr {
+    background-color : #FFFFFF;
+}
+
+section#skills-pgr {
+    background-color : #000000;
+    padding          : 1%;
+}
+
+#skills-pgr div.progress {
+    margin           : 1%;
+    font-weight      : bolder;
+    background-color : rgba(255, 255, 255, 0.25);
+    border           : 0px none;
+    box-shadow       : none;
+    height           : 2.5em;
+}
+
+div.progress-bar {
+    height           : auto;
+    background-color : #FFFFFF;
+}
+
+div.progress-bar > span {
+    position  : relative;
+    top       : 50%;
+    transform : translateY(-50%);
+    color     : #000000;
+    float     : left;
+    left      : 2%;
+    font-size : 14px;
+}
+
+/**
+Contact
+ */
+section#contact {
+    color : #FFFFFF;
+}
+
+section#contact > div > div > div > div {
+    position  : relative;
+    top       : 50%;
+    transform : translateY(-50%);
+}
+
+section#contact > div > div > div {
+    height : 25vh;
+}
+
+.first-box {
+    padding    : 10px;
+    background : #000000;
+}
+
+.second-box {
+    padding    : 10px;
+    background : #FFFFFF;
+    color      : #000000;
+}
+
+.third-box {
+    padding    : 10px;
+    background : #000000;
+}
+
+.fourth-box {
+    background : #FFFFFF;
+    color      : #000000;
+}
+
+/**
+Contact form
+ */
+
+.section-content {
+    text-align : center;
+
+}
+
+#contact_form {
+    padding-top           : 60px;
+    width                 : 100%;
+    width                 : 100vw;
+    height                : 550px;
+    background-image      : url("../images/stock/background.jpg");
+    background-repeat     : no-repeat;
+    background-attachment : fixed;
+    background-position   : center;
+    background-size       : 100% 100%;
+    color                 : #FFFFFF;
+}
+
+.contact-section {
+    padding-top : 40px;
+}
+
+.contact-section .col-md-6 {
+    width : 50%;
+}
+
+.form-line {
+    border-right : 1px solid #FFFFFF;
+}
+
+.form-group {
+    margin-top : 10px;
+}
+
+label {
+    font-size   : 1.3em;
+    line-height : 1em;
+    font-weight : normal;
+}
+
+.form-control {
+    font-size : 1.3em;
+    color     : #080808;
+}
+
+textarea.form-control {
+    height : 135px;
+    /* margin-top: px;*/
+}
+
+.btn.btn-default:hover {
+    background-color : #E6E6E6;
+    color            : #000000 !important;
+}
+
+.btn.btn-default.btn-border {
+    border-color : #FFFFFF;
+    color        : #FFFFFF;
+}
+
+.btn.btn-border {
+    border     : 2px solid;
+    background : transparent;
+}
+
+/**
+Animations
+ */
+
+@keyframes fadein {
+    from {
+        opacity : 0;
+    }
+    to {
+        opacity : 1;
+    }
+}
